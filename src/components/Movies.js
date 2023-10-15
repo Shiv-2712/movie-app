@@ -21,11 +21,11 @@
                 // everytime when page reloads
                 let oldFav = localStorage.getItem("imdb");
                 oldFav = JSON.parse(oldFav) || [];
-                console.log(oldFav);
-                // setFavourites(oldFav);
+                // console.log(oldFav);
+                setFavourites(oldFav);
                 // data manga 
                 axios.get(`https://api.themoviedb.org/3/trending/movie/week?api_key=5540e483a20e0b20354dabc2d66a31c9&page=${page}`).then((res) => {
-                    console.table(res.data.results)
+                    // console.table(res.data.results)
                     setMovies(res.data.results);
                 }
                 )
